@@ -4,7 +4,7 @@ import axios from 'axios';
 export const AuthContext = createContext();
 
 // Make sure API_URL matches the backend server's URL and port
-const API_URL = 'http://localhost:3001/api/auth';
+const API_URL = 'https://pizza-backend-coral.vercel.app/api/auth';
 
 // Setup axios interceptors for authentication
 const setupAxiosInterceptors = (token) => {
