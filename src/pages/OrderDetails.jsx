@@ -25,7 +25,7 @@ const OrderDetails = () => {
         
         try {
           // First try to fetch from API
-          const response = await axios.get(`https://pizza-backend-coral.vercel.app/api/orders/${id}`, config);
+          const response = await axios.get(`https://pizza-backend-xi.vercel.app/api/orders/${id}`, config);
           setOrder(response.data);
           setLoading(false);
         } catch (apiError) {
@@ -98,10 +98,10 @@ const OrderDetails = () => {
           },
         };
         
-        await axios.put(`https://pizza-backend-coral.vercel.app/api/orders/${id}/cancel`, {}, config);
+        await axios.put(`https://pizza-backend-xi.vercel.app/api/orders/${id}/cancel`, {}, config);
         
         // Refresh order data from API
-        const response = await axios.get(`https://pizza-backend-coral.vercel.app/api/orders/${id}`, config);
+        const response = await axios.get(`https://pizza-backend-xi.vercel.app/api/orders/${id}`, config);
         setOrder(response.data);
       } catch (apiError) {
         console.log('API cancel failed, updating localStorage:', apiError);

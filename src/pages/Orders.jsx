@@ -42,7 +42,7 @@ const Orders = () => {
               }
             };
             
-            const response = await axios.get('https://pizza-backend-coral.vercel.app/api/orders/myorders', config);
+            const response = await axios.get('https://pizza-backend-xi.vercel.app/api/orders/myorders', config);
             
             if (response.data && response.data.length > 0) {
               // Save orders to localStorage for future use
