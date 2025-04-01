@@ -33,15 +33,22 @@ const Header = () => {
             </Link>
           </div>
           
-          <button 
-            className="mobile-menu-button" 
-            onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div className="mobile-controls">
+            <Link to="/cart" className="mobile-cart-icon">
+              <span className="cart-icon-text">Cart</span>
+              {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+            </Link>
+            
+            <button 
+              className="mobile-menu-button" 
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
           
           <nav className={`navigation ${mobileMenuOpen ? 'open' : ''}`}>
             <ul>
@@ -75,7 +82,7 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li>
+              <li className="desktop-cart-item">
                 <Link to="/cart" className="cart-icon" onClick={closeMobileMenu}>
                   Cart
                   {totalItems > 0 && <span className="cart-count">{totalItems}</span>}

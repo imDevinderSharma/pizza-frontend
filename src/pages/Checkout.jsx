@@ -338,18 +338,6 @@ const Checkout = () => {
                     />
                     <label htmlFor="cod">Cash on Delivery</label>
                   </div>
-                  
-                  <div className="payment-option">
-                    <input
-                      type="radio"
-                      id="card"
-                      name="paymentMethod"
-                      value="card"
-                      checked={formData.paymentMethod === 'card'}
-                      onChange={handleChange}
-                    />
-                    <label htmlFor="card">Credit/Debit Card</label>
-                  </div>
                 </div>
               </div>
               

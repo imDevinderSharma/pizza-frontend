@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import HeroBanner from '../components/homepage/HeroBanner';
 import FeaturedPizzas from '../components/homepage/FeaturedPizzas';
 import Testimonials from '../components/homepage/Testimonials';
@@ -54,7 +55,7 @@ const Home = () => {
         <div className="container">
           <h2>Ready to order your pizza?</h2>
           <p>Get your favorite pizza delivered right to your doorstep!</p>
-          <a href="/menu" className="btn btn-secondary">Order Now</a>
+          <Link to="/menu" className="btn btn-secondary">Order Now</Link>
         </div>
       </section>
     </div>
