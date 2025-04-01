@@ -1021,6 +1021,36 @@ input:focus, textarea:focus, select:focus {
 .button-container .btn {
   flex: 1;
   min-width: 120px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-container .btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.button-container .btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
+}
+
+.button-container .btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.button-container .btn-secondary:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  transform: translateY(-2px);
 }
 
 .ingredients h3 {
@@ -1741,6 +1771,17 @@ input:focus, textarea:focus, select:focus {
     max-height: 400px;
   }
   
+  /* Pizza card size buttons tablet fix */
+  .size-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .size-buttons button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    min-width: 70px;
+  }
+  
   /* Checkout page responsive styles */
   .checkout-content {
     grid-template-columns: 1fr;
@@ -1848,6 +1889,29 @@ input:focus, textarea:focus, select:focus {
     padding: 1.5rem;
   }
   
+  /* Pizza size options mobile styling */
+  .size-buttons {
+    display: flex;
+    gap: 0.4rem;
+  }
+  
+  .size-buttons button {
+    padding: 0.5rem 0.3rem;
+    font-size: 0.85rem;
+    flex: 1;
+    min-width: auto;
+  }
+  
+  /* Pizza details buttons improvements */
+  .button-container {
+    gap: 10px;
+  }
+  
+  .button-container .btn {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
   /* Checkout responsive styling */
   .form-row {
     flex-direction: column;
@@ -1925,6 +1989,20 @@ input:focus, textarea:focus, select:focus {
   .add-to-cart {
     width: 100%;
     justify-content: center;
+  }
+  
+  /* Pizza details page small screen improvements */
+  .button-container {
+    flex-direction: column;
+  }
+  
+  .button-container .btn {
+    width: 100%;
+    padding: 12px 16px;
+  }
+  
+  .size-options button {
+    padding: 0.6rem 1rem;
   }
   
   /* Checkout responsive styling */
